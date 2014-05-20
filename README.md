@@ -1,6 +1,6 @@
 ouijaBoard
 ==========
-###Ouija board SOFTWARE installation guide:
+###Ouija board SOFTWARE installation and configuration guide:
 
 Created by: fito_segrera
 http://fii.to/
