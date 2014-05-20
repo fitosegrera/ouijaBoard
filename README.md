@@ -13,10 +13,10 @@ Download the Raspberry Pi Image from this link: http://fii.to/downloads/ouijaBoa
 
 ###Method 2 (The HARDCORE way)
 
-  ##2.1 Download Raspbian (TALK ABOUT THE STEPS FOR THIS)
+2.1 Download Raspbian (TALK ABOUT THE STEPS FOR THIS)
 
-  ##2.2 Install Pocketsphinx
-  Pocketsphinx is a opensource project for speech recognition. For mor information please see http://cmusphinx.sourceforge.net/wiki/download/
+2.2 Install Pocketsphinx
+Pocketsphinx is a opensource project for speech recognition. For mor information please see: http://cmusphinx.sourceforge.net/wiki/download/
   
     #Installation Instructions:
       
@@ -27,20 +27,20 @@ Download the Raspberry Pi Image from this link: http://fii.to/downloads/ouijaBoa
       tar -zxvf sphinxbase-0.8.tar.gz
       tar -zxvf pocketsphinx-0.8.tar.gz
       
-      Now we build and install sphinxbase:
+      #Now we build and install sphinxbase:
 
       cd ~/sphinxbase-0.8/
       ./configure --enable-fixed
       make
       sudo make install
       
-      And pocketsphinx:
+      #And pocketsphinx:
 
       cd ~/pocketsphinx-0.8/
       ./configure
       make
       sudo make install
       
-      Once the installations are complete, restart your Pi.
+      #Once the installations are complete, restart your Pi.
 
 
