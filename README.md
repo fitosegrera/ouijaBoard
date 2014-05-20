@@ -1,6 +1,11 @@
 ouijaBoard
 ==========
-####Ouija board installation guide:
+###Ouija board installation guide:
+
+Created by: fito_segrera
+http://fii.to/
+
+Special thanks to the JasperProject http://jasperproject.github.io/
 
 ###Method 1 (Eassy)
 
