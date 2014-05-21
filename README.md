@@ -35,6 +35,7 @@ Run the following commands to update Pi and some install some useful tools.
     sudo apt-get update
     sudo apt-get upgrade --yes
     sudo apt-get install vim git-core espeak python-dev python-pip bison libasound2-dev libportaudio-dev python-pyaudio     --yes
+    sudo apt-get install alsa-utils pulseaudio
     
 Update the firmware:
 
