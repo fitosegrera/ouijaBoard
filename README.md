@@ -35,6 +35,10 @@ Run the following commands to update Pi and some install some useful tools.
     sudo apt-get update
     sudo apt-get upgrade --yes
     sudo apt-get install vim git-core espeak python-dev python-pip bison libasound2-dev libportaudio-dev python-pyaudio     --yes
+    
+Update the firmware:
+
+    sudo rpi-update
 
 Plug in your USB microphone. Let’s open up an ALSA configuration file in vim:
 
@@ -60,6 +64,7 @@ Make sure you have speakers or headphones connected to the audio jack of your Pi
 
     aplay -D hw:1,0 temp.wav
 
+/////////////////////////NOT SURE ABOUT INCLUDING THIS PART/////////////////////////////////////
 Add the following line to the end of ~/.bash_profile:
 
     export LD_LIBRARY_PATH="/usr/local/lib"
@@ -71,7 +76,7 @@ And this to your ~/.bashrc or ~/.bash_profile:
     export LD_LIBRARY_PATH
     PATH=$PATH:/usr/local/lib/
     export PATH
-
+////////////////////////////////////////////////////////////////////////////////////////////////
 
 2.2 Install Pocketsphinx
 Pocketsphinx is a opensource project for speech recognition. For mor information please see: http://cmusphinx.sourceforge.net/wiki/download/
