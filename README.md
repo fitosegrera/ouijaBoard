@@ -35,7 +35,11 @@ Run the following commands to update Pi and some install some useful tools.
     sudo apt-get update
     sudo apt-get upgrade --yes
     sudo apt-get install vim git-core espeak python-dev python-pip bison libasound2-dev libportaudio-dev python-pyaudio     --yes
-    sudo apt-get install alsa-utils pulseaudio
+    sudo apt-get install alsa-utils 
+    
+To change the audio output of the RBpi type: (replace <n> with 1 for analog aoutput or 2 for HDMI) exaple sudo amixer cset numid=3 1
+
+    sudo amixer cset numid=3 <n> 
     
 Update the firmware:
 
@@ -65,19 +69,7 @@ Make sure you have speakers or headphones connected to the audio jack of your Pi
 
     aplay -D hw:1,0 temp.wav
 
-/////////////////////////NOT SURE ABOUT INCLUDING THIS PART/////////////////////////////////////
-Add the following line to the end of ~/.bash_profile:
 
-    export LD_LIBRARY_PATH="/usr/local/lib"
-    source .bashrc
-
-And this to your ~/.bashrc or ~/.bash_profile:
-
-    LD_LIBRARY_PATH="/usr/local/lib"
-    export LD_LIBRARY_PATH
-    PATH=$PATH:/usr/local/lib/
-    export PATH
-////////////////////////////////////////////////////////////////////////////////////////////////
 
 2.2 Install Pocketsphinx
 Pocketsphinx is a opensource project for speech recognition. For mor information please see: http://cmusphinx.sourceforge.net/wiki/download/
