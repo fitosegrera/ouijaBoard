@@ -130,3 +130,6 @@ And pocketsphinx:
 Once the installations are complete, restart your Pi.
 
 
+----------------------------------------------------------
+###Useful extra links to check:
+https://sites.google.com/site/semilleroadt/home/raspberry-pi
