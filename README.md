@@ -129,7 +129,43 @@ And pocketsphinx:
       
 Once the installations are complete, restart your Pi.
 
+###Speech Recognition
+    
+Go to pocketsphinx-0.8/src/programs and run:
+ 
+    ./pocketsphinx_continuous
+    
+###Installing Julius
+
+This option is in case you feel that pocketsphinx is not acurrate enough with the task of recognizing your words in the Rpi.
+
+Install cvs:
+
+    sudo apt-get install cvs
+    
+    cvs -z3 -d:pserver:anonymous@cvs.sourceforge.jp:/cvsroot/julius co julius4
+    
+If you're using Raspbian, set the compiler flags by the environment variables:
+
+    export CFLAGS="-O2 -mcpu=arm1176jzf-s -mfpu=vfp -mfloat-abi=hard -pipe -fomit-frame-pointer"
+    
+Go into the julius4 folder just created on /home/pi:
+
+    cd julius4
+    ./configure --with-mictype=alsa
+    make
+    sudo make install
+    
+    
 
 ----------------------------------------------------------
 ###Useful extra links to check:
 https://sites.google.com/site/semilleroadt/home/raspberry-pi
+https://sites.google.com/site/observing/Home/speech-recognition-with-the-raspberry-pi
+http://julius.sourceforge.jp/en_index.php
+http://julius.sourceforge.jp/en_index.php?q=en_grammar.html  (WRITING RECOGNITION GRAMAR FOR JULIUS)
+http://www.voxforge.org/
+http://www.aonsquared.co.uk/robot_arm_tutorial_1
+https://github.com/gillesdemey/google-speech-v2  (USE OF GOOGLE SPEECH V2)
+
+
