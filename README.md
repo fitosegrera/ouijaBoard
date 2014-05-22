@@ -167,5 +167,5 @@ http://julius.sourceforge.jp/en_index.php?q=en_grammar.html  (WRITING RECOGNITIO
 http://www.voxforge.org/
 http://www.aonsquared.co.uk/robot_arm_tutorial_1
 https://github.com/gillesdemey/google-speech-v2  (USE OF GOOGLE SPEECH V2)
-
+http://stevenhickson.blogspot.com/2013/04/voice-control-on-raspberry-pi.html  (VOICE COMMAND APP)
 
