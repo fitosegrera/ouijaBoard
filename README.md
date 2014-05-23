@@ -148,6 +148,31 @@ The curl command takes an audio file (.flac format) uploads it to the google api
     
 Example GOOGLE_API_KEY:  AIzaSyBOti4mM-6x9WDnZIjIeyEU21OpBXqWBgw
 
+Create a shell script to record an audio file, upload it to the google speech API and return the json object with the converted text (open a text editor, copy and paste the following script):
+
+    #!/bin/bash
+
+    echo "Recording... Press Ctrl+C to Stop."
+    ffmpeg -f alsa -ac 2 -ar 44100 -i pulse voice.flac
+
+    curl -X POST \
+    --data-binary @/PATH/TO/AUDIO/FILE/audiofile.flac \
+    --header 'Content-Type: audio/x-flac; rate=44100;' \
+    'https://www.google.com/speech-api/v2/recognize?output=json&lang=en-us&key=YOUR_GOOGLE_API_KEY'
+
+    rm voice.flac  > /dev/null 2>&1
+
+Save the script scriptName.sh (replace scriptName with any name of your choice)
+
+Lets make it an executable:
+
+    chmod +x scriptName.sh
+    
+And finally lets run it:
+
+    ./scriptName.sh
+    
+    
 ----------------------------------------------------------
 ###Useful extra links to check:
 https://sites.google.com/site/semilleroadt/home/raspberry-pi
@@ -158,4 +183,4 @@ http://www.voxforge.org/
 http://www.aonsquared.co.uk/robot_arm_tutorial_1
 https://github.com/gillesdemey/google-speech-v2  (USE OF GOOGLE SPEECH V2)
 http://stevenhickson.blogspot.com/2013/04/voice-control-on-raspberry-pi.html  (VOICE COMMAND APP)
-
+https://github.com/gillesdemey/google-speech-v2
