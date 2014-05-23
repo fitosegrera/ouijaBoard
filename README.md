@@ -135,7 +135,7 @@ Go to pocketsphinx-0.8/src/programs and run:
  
     ./pocketsphinx_continuous
     
-###GOOGLE speech recognition API
+###GOOGLE speech recognition API (THIS IS JUST ONE EXAMPLE USING CURL AND A SHELL SCRIPT... FOR THE FULL VERSION SEE THE REPOSITOY CALLED ouijaBoard_2.0: https://github.com/fitosegrera/ouijaBoard_2.0
 
 This option is in case you feel that pocketsphinx is not acurrate enough with the task of recognizing your words in the Rpi.
 
