@@ -135,28 +135,18 @@ Go to pocketsphinx-0.8/src/programs and run:
  
     ./pocketsphinx_continuous
     
-###Installing Julius
+###GOOGLE speech recognition API
 
 This option is in case you feel that pocketsphinx is not acurrate enough with the task of recognizing your words in the Rpi.
 
-Install cvs:
+The curl command takes an audio file (.flac format) uploads it to the google api and returns a json object with the conversion from audio to text. Replace "/PATH/TO/AUDIO/FILE/audiofile.flac" with the path to your .flac audio file and "YOUR_GOOGLE_API_KEY" with the Key you get after signing up to google developers and creating an app:
 
-    sudo apt-get install cvs
+    curl -X POST \
+    --data-binary @/PATH/TO/AUDIO/FILE/audiofile.flac \
+    --header 'Content-Type: audio/x-flac; rate=44100;' \
+    'https://www.google.com/speech-api/v2/recognize?output=json&lang=en-us&key=YOUR_GOOGLE_API_KEY'
     
-    cvs -z3 -d:pserver:anonymous@cvs.sourceforge.jp:/cvsroot/julius co julius4
-    
-If you're using Raspbian, set the compiler flags by the environment variables:
-
-    export CFLAGS="-O2 -mcpu=arm1176jzf-s -mfpu=vfp -mfloat-abi=hard -pipe -fomit-frame-pointer"
-    
-Go into the julius4 folder just created on /home/pi:
-
-    cd julius4
-    ./configure --with-mictype=alsa
-    make
-    sudo make install
-    
-    
+Example GOOGLE_API_KEY:  AIzaSyBOti4mM-6x9WDnZIjIeyEU21OpBXqWBgw
 
 ----------------------------------------------------------
 ###Useful extra links to check:
